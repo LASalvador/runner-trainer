@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino de Esteira Personalizado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Meu Treino de Esteira</h1>
+
+        <section id="configuracao-treino">
+            <h2>Configurar Treino</h2>
+            <form id="form-treino">
+                <h3>Aquecimento</h3>
+                <label for="aquecimento-velocidade">Velocidade (km/h):</label>
+                <input type="number" id="aquecimento-velocidade" value="6" required>
+                <label for="aquecimento-minutos">Minutos:</label>
+                <input type="number" id="aquecimento-minutos" value="5" required>
+
+                <h3>Miolo</h3>
+                <div class="miolo-variacao">
+                    <h4>Variação 1</h4>
+                    <label for="miolo-vel1-1">Velocidade 1 (km/h):</label>
+                    <input type="number" id="miolo-vel1-1" value="8" required>
+                    <label for="miolo-min1-1">Minutos 1:</label>
+                    <input type="number" id="miolo-min1-1" value="3" required>
+                    <label for="miolo-vel2-1">Velocidade 2 (km/h):</label>
+                    <input type="number" id="miolo-vel2-1" value="10" required>
+                    <label for="miolo-min2-1">Minutos 2:</label>
+                    <input type="number" id="miolo-min2-1" value="1" required>
+                </div>
+                <label for="miolo-repeticoes">Número de Repetições:</label>
+                <input type="number" id="miolo-repeticoes" value="3" required>
+
+                <h3>Desaquecimento</h3>
+                <label for="desaquecimento-velocidade">Velocidade (km/h):</label>
+                <input type="number" id="desaquecimento-velocidade" value="5" required>
+                <label for="desaquecimento-minutos">Minutos:</label>
+                <input type="number" id="desaquecimento-minutos" value="5" required>
+
+                <button type="submit">Iniciar Treino</button>
+            </form>
+        </section>
+
+        <section id="execucao-treino" style="display: none;">
+            <h2>Executando Treino</h2>
+            <div class="current-stage">
+                <p>Etapa Atual: <span id="current-stage-name"></span></p>
+                <p>Tempo Restante: <span id="time-remaining">00:00</span></p>
+                <p>Velocidade Recomendada: <span id="current-speed">0</span> km/h</p>
+                <p id="miolo-info" style="display: none;">Repetição do Miolo: <span id="current-repetition">0</span> de <span id="total-repetitions">0</span></p>
+            </div>
+            <div class="controls">
+                <button id="start-pause-btn">Iniciar</button>
+                <button id="reset-btn">Reiniciar</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

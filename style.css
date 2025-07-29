@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha no topo */
+    min-height: 100vh; /* Garante que o corpo ocupe a altura total da viewport */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px; /* Adiciona margem superior para não ficar colado no topo */
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+form input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.miolo-variacao {
+    border: 1px dashed #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.miolo-variacao h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.current-stage {
+    background-color: #e9f7ef;
+    border: 1px solid #cce5d6;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.current-stage p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#time-remaining {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #007bff;
+    display: block;
+    margin-top: 10px;
+}
+
+#current-speed {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffc107;
+    display: block;
+    margin-top: 5px;
+}
+
+.controls button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: calc(50% - 10px);
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+#start-pause-btn {
+    background-color: #007bff; /* Azul para iniciar/pausar */
+}
+
+#start-pause-btn.pause {
+    background-color: #ffc107; /* Amarelo para pausar */
+}
+
+#reset-btn {
+    background-color: #dc3545; /* Vermelho para reiniciar */
+}
+
+#reset-btn:hover {
+    background-color: #c82333;
+}
+
+/* Estilo para ocultar a seção de configuração quando o treino estiver em execução */
+#configuracao-treino.hidden {
+    display: none;
+}
